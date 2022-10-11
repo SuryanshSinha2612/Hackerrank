@@ -60,10 +60,8 @@
 #  [3 4]] 
 
 
-import numpy
-
-NMP = map(int, raw_input().split())
-N = numpy.array([raw_input().split() for i in range(NMP[0])], int)
-M = numpy.array([raw_input().split() for i in range(NMP[1])], int)
-
-print numpy.concatenate((N, M), axis = 0)
+import numpy as np
+n, m, p = list(map(int, input().split()))
+arr1 = np.array([list(map(int, input().split())) for _ in range(n)])
+arr2 = np.array([list(map(int, input().split())) for _ in range(m)])
+print(np.concatenate((arr1, arr2), axis=0))
